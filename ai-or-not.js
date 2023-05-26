@@ -85,7 +85,7 @@ function uiReported_initialState() {
 }
 
 function updateReportResult(id, reportPredict, reportComment) {
-	const url = `https://results-api.optic.xyz/api/detector/reports/result/${id}`
+	const url = `https://atrium-prod-api.optic.xyz/results/api/detector/reports/result/${id}`
 	const body = {
 		is_proper_predict: reportPredict,
 		comment: reportComment,
@@ -110,14 +110,14 @@ function changeShareUrl(responseId) {
 	currentResultId = responseId
 	document.querySelector(
 		'[fs-socialshare-element="url"]'
-	).textContent = `https://results.optic.xyz/aiornot/${responseId}`
+	).textContent = `https://results.aiornot.com/aiornot/${responseId}`
 
 	let allShareUrl = document.querySelectorAll('.result-screen_share-item')
 
 	allShareUrl.forEach(el => {
 		el.setAttribute(
 			'data-url',
-			`https://results.optic.xyz/aiornot/${responseId}`
+			`https://results.aiornot.com/aiornot/${responseId}`
 		)
 	})
 }
