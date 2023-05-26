@@ -336,8 +336,6 @@ function findHighestConfidence(data) {
 //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 //function to check image by url
 
-console.log('test 3')
-
 async function postToApi_url() {
 	uiEl_urlError.classList.add('hide')
 	loadingStart()

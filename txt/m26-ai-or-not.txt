@@ -340,7 +340,7 @@ async function postToApi_url() {
 	uiEl_urlError.classList.add('hide')
 	loadingStart()
 
-	const baseUrl = `https://results-api.optic.xyz/api/detector/reports/json?source=web&user_id=${visitorId}`
+	const baseUrl = `https://atrium-prod-api.optic.xyz/results/api/detector/reports/json?source=web&user_id=${visitorId}`
 
 	const options = {
 		method: 'POST',
@@ -423,7 +423,7 @@ dropzone.addEventListener('drop', async function (event) {
 		} else {
 			loadingStart()
 
-			const baseUrl = `https://results-api.optic.xyz/api/detector/reports/raw?source=web&user_id=${visitorId}`
+			const baseUrl = `https://atrium-prod-api.optic.xyz/results/api/detector/reports/raw?source=web&user_id=${visitorId}`
 			const formData = new FormData()
 			formData.append('binary', file, 'file_name.png')
 
@@ -474,7 +474,7 @@ inputEl_fileInput.addEventListener('change', event => {
 
 		// Отобразить выбранное изображение в img элементе
 
-		const baseUrl = `https://results-api.optic.xyz/api/detector/reports/raw?source=web&user_id=${visitorId}`
+		const baseUrl = `https://atrium-prod-api.optic.xyz/results/api/detector/reports/raw?source=web&user_id=${visitorId}`
 		const formData = new FormData()
 		formData.append('binary', file, 'file_name.png')
 
